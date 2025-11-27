@@ -33,11 +33,7 @@ pipeline {
 
         stage('Deploy') {
                     steps {
-                        // Даем права на выполнение (если нужно)
-                        sh 'chmod +x run.sh'
-
-                        // Запускаем скрипт деплоя
-                        sh './run.sh'
+                        sh 'java -jar target/stsr3-1.0-SNAPSHOT.jar &'
                     }
                 }
 

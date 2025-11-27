@@ -27,6 +27,7 @@ public class WriteExample {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Программа отработала успешно!");
     }
     private static Lesson createLesson() {
         Lesson lesson = new Lesson();

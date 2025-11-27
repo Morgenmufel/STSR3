@@ -33,7 +33,10 @@ pipeline {
 
         stage('Deploy') {
                     steps {
-                        sh 'java -jar target/stsr3-1.0-SNAPSHOT.jar &'
+                        dir("$WORKSPACE") {
+                                    sh 'chmod +x run.sh'
+                                    sh './run.sh'
+                                }
                     }
                 }
 

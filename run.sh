@@ -12,4 +12,4 @@ if [ -n "$PID" ]; then
 fi
 
 echo "Запускаем приложение"
-nohup java -jar target/app.jar > app.log 2>&1 &
+nohup java -jar target/$APP_NAME > app.log 2>&1 &

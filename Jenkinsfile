@@ -30,5 +30,16 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
+
+        stage('Deploy') {
+                    steps {
+                        // Даем права на выполнение (если нужно)
+                        sh 'chmod +x run.sh'
+
+                        // Запускаем скрипт деплоя
+                        sh './run.sh'
+                    }
+                }
+
     }
 }

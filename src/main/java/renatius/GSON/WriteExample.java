@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.time.LocalTime;
 
 public class WriteExample {
-
     public static void main(String[] args) {
         Gson gson = Converters.registerLocalTime(new GsonBuilder())
                 .setPrettyPrinting().create();
@@ -27,7 +26,7 @@ public class WriteExample {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("The program finished successfully!");
+        System.out.println("GG WP");
     }
     private static Lesson createLesson() {
         Lesson lesson = new Lesson();
@@ -36,6 +35,4 @@ public class WriteExample {
         lesson.setTopics(List.of("Дискриминант", "Логарифмы", "Теорема Пифагора"));
         return lesson;
     }
-
-
 }
